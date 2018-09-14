@@ -11,12 +11,31 @@
         <h1>Hello There!</h1>
         <p>To get started, edit <code>src/index.js</code>.</p>
 
+        <section class="movieSection">
 
         <h3 id="info"></h3>
 
+        </section>
+        <hr>
 
+        <form>
+            <p>Movie Title</p>
+            <input type="text" id="movieTitleInput">
+            <br>
+
+            <p>Rating</p>
+            <input type="radio" name="rating" value="one">1
+            <input type="radio" name="rating" value="two">2
+            <input type="radio" name="rating" value="three">3
+            <input type="radio" name="rating" value="four">4
+            <input type="radio" name="rating" value="five">5
+            <p>
+                <input type="submit" value="Submit" id="submitButton">
+            </p>
+            
+        </form>
+        
     </div>
-
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="/main.js"></script>
 </body>

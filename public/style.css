@@ -8,3 +8,19 @@ html, body {
     transform: translateY(-100%);
     text-align: center;
 }
+
+.movieSection{
+    margin: 15px;
+    padding: 0 auto;
+}
+
+#info{
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: left;
+
+}
+
+#movieTitleInput{
+    width: 30%;
+}

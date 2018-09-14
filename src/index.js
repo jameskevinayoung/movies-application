@@ -10,15 +10,32 @@ sayHello('World');
 const {getMovies} = require('./api.js');
 
 
-$('#info').append('Now Loading');
+$('#info').append('Now Loading'); //jquery appending #info with Now Loading
 
-$.ajax('/api/movies').done(function(data) {
-    $('#info').html('');
-    data.forEach(function(movie){
-      $('#info').append(movie.title);
+$.ajax('/api/movies').done(function(data) {  //ajax request from api movies; when done run function
+    $('#info').html('');  //change html of #info
+    data.forEach(function(movie){ //loop through the data (an array with a forEach) getting each movie
+      $('#info').append(formatMovies(movie)); //append the #info with movie title
     })
 });
 
+function formatMovies(movie){//create a function that formats the movie title and rating
+    let movieTitle = "<td class='movie'>"+ movie.title+"</td>";
+    let movieRating = "<td class='rating'>"+ movie.rating+"</td>";
+    let movieItem = "<tr class='rowcontent'>" + movieTitle+movieRating + "</tr>";
+    //variable that formats each line that will be added to the
+    return movieItem;
+}
+
+
+// Allow users to add new movies
+
+// Create a form for adding a new movie that has fields for the movie's title and rating
+/**
+ * When the form is submitted, the page should not reload / refresh, instead, your javascript should make a
+ * POST request to /api/movies with the information the user put into the form
+
+ */
 
 
 
